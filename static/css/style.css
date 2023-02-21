@@ -11,3 +11,7 @@
     border: 0.2rem solid black;
     width: 50%;
 }
+
+.form-control>input {
+    border: 5rem solid black;
+}
