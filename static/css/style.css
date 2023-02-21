@@ -12,6 +12,7 @@
     width: 50%;
 }
 
-.form-control>input {
-    border: 5rem solid black;
+#card-row {
+    display: flex;
+    flex-wrap: wrap;
 }
