@@ -11,30 +11,12 @@
             <h1 class="text-center">Please fill out the below form to book a class</h1>
         </div>
     </div>
-    <form class="form-control" method="POST">
-        {% for bookings in booking_info %}
-        <div class="row text-center">
-            <h1>Logged in as: {{ bookings.user }}</h1>
-        </div>
-        <div class="row">
-            <select class="form-control">
-                <option>{{bookings.level}}</option>
-            </select>
-        </div>
-        <div class="row">
-            <select class="form-control">
-                <option>{{bookings.time}}
-                <option>
-            </select>
-        </div>
-        <div class="row">
-            <select class="form-control">
-                <option>{{bookings.date}}
-                <option>
-            </select>
-        </div>
-
-        {% endfor %}
+    <form class="form-control" method="post">
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <button class="btn btn-primary" type="submit">Book now!</button>
     </form>
 </div>
 {% else %}

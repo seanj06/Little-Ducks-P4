@@ -5,7 +5,7 @@
 <div class="container">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <h1 id="hero-header">Welcome To Little Ducks</h1>
             </div>
         </div>
@@ -62,12 +62,15 @@
         {% if user.is_authenticated %}
         <div class="col-3">
             <div class="card" style="width: 18rem;">
-                <img src="../static/images/food.jpeg" class="card-img-top" alt="...">
+                <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1677163945/pexels-photo-5076531_z60x5n.webp"
+                    class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Profile</h5>
+                    <h5 class="card-title">Book Online</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                         the card's content.</p>
-                    <a href="{% url 'booking' %}" class="btn btn-primary">Go somewhere</a>
+                    <div class="col text-center">
+                        <a href="{% url 'booking' %}" class="btn btn-primary">Book Online</a>
+                    </div>
                 </div>
             </div>
         </div>
