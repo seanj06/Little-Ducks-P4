@@ -12,13 +12,19 @@
         </div>
     </div>
     <h1 class="text-center">Logged in as {{ user.get_username }}</h1>
-    <form class="form-control" method="post">
-        <table>
-            {{ form }}
-        </table>
-        {% csrf_token %}
-        <button class="btn btn-primary" type="submit">Book now!</button>
-    </form>
+    <div class="row">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+            <form class="form-control" id="book-form" method="post">
+                <table>
+                    {{ form|crispy }}
+                </table>
+                {% csrf_token %}
+                <div class="col-10 text-center">
+                    <button class="btn btn-primary" type="submit">Book now!</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 {% else %}
 <h1>You Must be logged in to book a class</h1>

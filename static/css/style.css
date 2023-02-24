@@ -16,3 +16,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.form-control {
+    border: 0.2rem solid grey;
+}
