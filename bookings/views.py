@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
 
@@ -12,20 +12,19 @@ def booking(request):
             form.save()
             return redirect('/')
     else:
-        form = BookingForm()  
-     
+        form = BookingForm()
+
     context = {
         "form": form,
-    }    
+    }
     return render(request, 'booking.html', context)
 
 
-def users(request):
-    
-    user_info = Booking.objects.all()
+def booking_detail(request, id):
+    booking = get_object_or_404(Booking, pk=id)
 
     context = {
-        'user_info': user_info,
+        "booking": booking,
     }
 
-    return render(request, 'booking.html', context)    
+    return render(request, 'booking-conf.html', context)
