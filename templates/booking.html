@@ -18,6 +18,16 @@
             
         </div>
     </div>
+    <div class="row text-center">
+        <div class="col-12">
+            <h1>Please Confirm the booking details before pressing submit</h1>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <a href="{% url 'home' %}" class="btn btn-primary">Confirm</a>
+        </div>
+    </div>
 </div>
 
 
@@ -38,7 +48,7 @@
                     {{ form|crispy }}
                 </table>
                 {% csrf_token %}
-                <div class="col-10 text-center">
+                <div class="col text-center">
                     <button class="btn btn-primary" type="submit">Book now!</button>
                 </div>
             </form>

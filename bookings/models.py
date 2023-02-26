@@ -18,5 +18,5 @@ class Booking(models.Model):
         db_table = "Booking"
     
     def __str__(self):
-        return f"date: {self.date} time: {self.time}"
+        return f" user: {self.user}date: {self.date} time: {self.time}"
 
