@@ -10,8 +10,7 @@ def booking(request):
         form = BookingForm(request.POST)
         if form.is_valid:
             form.save()
-            return redirect('booking_detail')
-            
+
     else:
         form = BookingForm()
 
@@ -22,9 +21,11 @@ def booking(request):
 
 
 def booking_detail(request):
-    bookings = Booking.objects.all()
+    form = BookingForm(request.POST)
+    
+   
 
     context = {
-        'bookings': bookings,
+        'form': form,
     }
     return render(request, 'booking-conf.html', context)

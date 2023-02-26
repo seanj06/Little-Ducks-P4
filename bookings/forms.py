@@ -7,3 +7,5 @@ class BookingForm(ModelForm):
     class Meta:
         model = Booking
         fields = '__all__'
+
+
