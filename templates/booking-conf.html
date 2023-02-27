@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col">
+            <h1>Booking confirmation for: {{ user }}</h1>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">User:</th>
+                <th scope="col">Level:</th>
+                <th scope="col">Date:</th>
+                <th scope="col">Time:</th>
+                <th scope="col">Time Of Booking:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user }}</td>
+                <td>{{ level }}</td>
+                <td>{{ date }}</td>
+                <td>{{ time }}</td>
+                <td>{{ time_of_booking }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row text-center">
+        <div class="col">
+            <h2>You Can Edit or cancel a booking in My Profile Section</h2>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-12">
+            <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+</div>
+
+
+
+{% endif %}
+{% endblock %}
