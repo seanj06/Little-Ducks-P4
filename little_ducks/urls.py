@@ -21,4 +21,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path("", include("swim_class.urls")),
     path('bookings/', include("bookings.urls")),
+    path('profile/', include("Profile.urls"))
 ]
