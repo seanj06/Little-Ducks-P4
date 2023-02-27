@@ -20,16 +20,16 @@
                 <th scope="col">Level:</th>
                 <th scope="col">Date:</th>
                 <th scope="col">Time:</th>
-                <th scope="col">Time Of Booking:</th>
+                <th scope="col">Date Of Booking:</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>{{ user }}</td>
+                <td>{{ user.get_username }}</td>
                 <td>{{ level }}</td>
                 <td>{{ date }}</td>
                 <td>{{ time }}</td>
-                <td>{{ time_of_booking }}</td>
+                <td>{% now "D d M Y"%}</td>
             </tr>
         </tbody>
     </table>

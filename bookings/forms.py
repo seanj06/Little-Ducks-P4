@@ -7,7 +7,7 @@ class BookingForm(ModelForm):
     
     class Meta:
         model = Booking
-        fields = '__all__'
+        exclude = ['user', 'time_of_booking']
 
 
 
